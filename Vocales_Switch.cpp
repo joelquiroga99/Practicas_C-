@@ -6,24 +6,25 @@ Fecha:2024 - 01 - 15
 Version:1.0
 */
 #include <iostream>
+#include <cctype> //Necesario para a√±adir la funcion tolower.
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	// Declarar una variable para almacenar el car·cter ingresado
+	// Declarar una variable para almacenar el car√°cter ingresado
 	char caracter;
 	
-	// Solicitar al usuario que ingrese un car·cter
+	// Solicitar al usuario que ingrese un car√°cter
 	cout << "Ingrese una letra:";
 	
 	// Leer la entrada del usuario y almacenarla en la variable 'caracter'
 	cin >> caracter;
 	
-	// Convertir el car·cter ingresado a min˙sculas utilizando la funciÛn tolower
+	// Convertir el car√°cter ingresado a min√∫sculas utilizando la funci√≥n tolower
 	caracter = tolower(caracter);
 	
-	// Utilizar una declaraciÛn switch para verificar si el car·cter es una vocal
+	// Utilizar una declaraci√≥n switch para verificar si el car√°cter es una vocal
 	switch(caracter) {
-		// Casos para las vocales en min˙sculas
+		// Casos para las vocales en min√∫sculas
 	case 'a':
 	case 'e':
 	case 'i':
@@ -38,6 +39,6 @@ int main(int argc, char *argv[]) {
 		cout << "No es una vocal.";
 	};
 	
-	// Devolver 0 para indicar una ejecuciÛn exitosa
+	// Devolver 0 para indicar una ejecuci√≥n exitosa
 	return 0;
 }
