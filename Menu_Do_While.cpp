@@ -15,8 +15,8 @@ MENU
 */
 
 #include <iostream>
-#include <unistd.h> // Para la función sleep necesaria para usar la función Esperar
-#include <cstdlib>  // Para la función system necesaria para usar la función limpiar pantalla
+#include <windows.h> // Para la funciÃ³n sleep necesaria para usar la funciÃ³n Esperar
+#include <cstdlib>  // Para la funciÃ³n system necesaria para usar la funciÃ³n limpiar pantalla
 
 using namespace std;
 
@@ -27,7 +27,7 @@ int main() {
 		// Limpiar la pantalla
 		system("cls");
 		
-		// Mostrar el menú principal
+		// Mostrar el menÃº principal
 		cout << "MENU PRINCIPAL" << endl;
 		cout << "1. Opcion uno" << endl;
 		cout << "2. Opcion dos" << endl;
@@ -37,12 +37,12 @@ int main() {
 		
 		switch (opcion) {
 		case 1:
-			// Limpiar pantalla y mostrar mensaje para la opción uno
+			// Limpiar pantalla y mostrar mensaje para la opciÃ³n uno
 			system("cls");
 			cout << "Escogiste opcion uno." << endl;
 			break;
 		case 2:
-			// Limpiar pantalla y mostrar mensaje para la opción dos
+			// Limpiar pantalla y mostrar mensaje para la opciÃ³n dos
 			system("cls");
 			cout << "Escogiste opcion dos." << endl;
 			break;
@@ -52,18 +52,18 @@ int main() {
 			cout << "Saliendo del programa." << endl;
 			break;
 		default:
-			// Limpiar pantalla y mostrar mensaje para opción no válida
+			// Limpiar pantalla y mostrar mensaje para opciÃ³n no vÃ¡lida
 			system("cls");
 			cout << "Opcion no valida." << endl;
 		}
 		
 		if (opcion != 0) {
-			// Esperar 2 segundos antes de continuar (solo si la opción no es salir)
-			sleep(2);
+			// Esperar 2 segundos antes de continuar (solo si la opciÃ³n no es salir)
+			Sleep(2000);
 		}
 		
 	} while (opcion != 0);
 	
-	// Devolver 0 para indicar una ejecución exitosa
+	// Devolver 0 para indicar una ejecuciÃ³n exitosa
 	return 0;
 }
